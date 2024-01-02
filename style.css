@@ -21,7 +21,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 15px 200px;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,8 +36,17 @@ header .brand {
   text-decoration: none;
 }
 
+header .burger {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: goldenrod;
+}
+
 header .navigasi {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header .navigasi a {
@@ -46,15 +55,34 @@ header .navigasi a {
   text-transform: uppercase;
   font-weight: 700;
   text-decoration: none;
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
-header .navigasi a:hover {
-  color: #3a6cf4;
-}
+/* Gaya untuk perangkat seluler */
+@media only screen and (max-width: 768px) {
+  header .burger {
+    display: block;
+  }
 
-body {
-  min-height: 110vh;
+  header .navigasi {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+  }
+
+  header .navigasi.active {
+    display: flex;
+  }
+
+  header .navigasi a {
+    margin: 10px 0;
+  }
 }
 
 /* h4 secara umum */
