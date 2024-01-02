@@ -59,7 +59,7 @@ header .navigasi a {
 }
 
 /* Gaya untuk perangkat seluler */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 500px) {
   header .burger {
     display: block;
   }
